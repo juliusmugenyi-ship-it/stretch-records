@@ -34,3 +34,11 @@ console.log(artistText);
 // Convert JSON text back into an object
 const parsedArtist = JSON.parse(artistText);
 console.log(parsedArtist.name);
+
+// Page as a system:
+// Client: The web browser (Chrome) requesting the Stretch Records page.
+// Server: The local Live Server development server serving the project files.
+// Request: The client asked the server for index.html, JavaScript files,
+// CSS, images, and artists.json data needed to render the page.
+// Response: The server returned the HTML, styles, scripts, images, and JSON data
+// that the browser used to build and display the artist cards.
