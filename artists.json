@@ -49,7 +49,7 @@
         "cover": "images/asake-mr-money-with-the-vibe.jpg"
       },
       {
-        "title": "Goody",
+        "title": "Jogodo",
         "duration": "3:08",
         "cover": "images/asake-real.jpg"
       },
@@ -125,6 +125,35 @@
       {
         "title": "Ghost Riders in the Sky",
         "duration": "3:45"
+      }
+    ]
+  },
+  {
+    "name": "Bob Marley",
+    "genre": "Reggae",
+    "total": "15:00",
+    "image": "images/bob-marley.jpg",
+    "blurb": "A legendary reggae artist whose music spread messages of peace, unity, and love worldwide.",
+    "songs": [
+      {
+        "title": "Three Little Birds",
+        "duration": "3:00"
+      },
+      {
+        "title": "One Love",
+        "duration": "2:50"
+      },
+      {
+        "title": "Redemption Song",
+        "duration": "3:48"
+      },
+      {
+        "title": "Is This Love",
+        "duration": "3:52"
+      },
+      {
+        "title": "Could You Be Loved",
+        "duration": "1:30"
       }
     ]
   }
