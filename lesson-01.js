@@ -14,3 +14,4 @@
 // Did not change: script.js and index.html.
 // This separation is the point because data can be updated independently
 // from the code that renders it and the page structure.
+// while the rendering logic and page structure remain reusable.
