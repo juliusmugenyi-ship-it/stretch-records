@@ -1,0 +1,40 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.artist {
+  border-radius: 16px;
+}
+
+.song-card {
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.artist {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.artist::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #111;
+  margin-bottom: 2rem;
+}
+
+.song-card {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.artist-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
