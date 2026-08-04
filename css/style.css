@@ -38,3 +38,10 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
