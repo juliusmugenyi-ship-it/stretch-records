@@ -111,7 +111,7 @@ thirdFunction → secondFunction → firstFunction
 The innermost function appears first because it is where the error occurred.
 */
 
-function firstFunction() {
+/*function firstFunction() {
   secondFunction();
 }
 
@@ -124,3 +124,19 @@ function thirdFunction() {
 }
 
 firstFunction();
+*/
+
+// Countdown using setInterval() question: 5: What will be printed to the console and in what order?
+
+let count = 10;
+
+const countdown = setInterval(() => {
+  console.log(count);
+
+  count--;
+
+  if (count < 0) {
+    clearInterval(countdown);
+    console.log("Countdown stopped");
+  }
+}, 1000);
