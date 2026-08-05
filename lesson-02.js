@@ -1,5 +1,25 @@
 // Lesson 2 standalone programs
 
+/*
+Prediction:
+
+1. "Start" will print first. RIGHT
+2. "Timer 1" will print second. WRONG
+3. "End" will print third. WRONG
+
+Corrections:
+- Line 2 is wrong because setTimeout callbacks run after the current synchronous code finishes.
+- Line 3 is wrong because "End" is logged immediately before the timer callback runs.
+*/
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timer 1");
+}, 1000);
+
+console.log("End");
+
 // Lesson 02 Network observations:
 // Total requests: 11
 // Three requests:
@@ -21,9 +41,9 @@
 // - index.html
 // - ws
 
-const message = "Lesson 2 is starting";
+//const message = "Lesson 2 is starting";
 
-console.log(message);
+//console.log(message);
 
 /*
 Observation:
@@ -31,9 +51,9 @@ JavaScript can store information in variables
 and display it using console.log().
 */
 
-const artists = ["Bob Marley", "Fela Kuti", "Nina Simone"];
+//const artists = ["Bob Marley", "Fela Kuti", "Nina Simone"];
 
-console.log(artists.length);
+//console.log(artists.length);
 
 /*
 Observation:
