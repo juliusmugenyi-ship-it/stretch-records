@@ -20,6 +20,14 @@ setTimeout(() => {
 
 console.log("End");
 
+/*
+Observation:
+
+The blocking loop occupied the JavaScript call stack on the main thread.
+While it was running, the browser could not handle user interactions,
+render updates, or other queued tasks because the event loop was blocked.
+*/
+
 // Lesson 02 Network observations:
 // Total requests: 11
 // Three requests:
