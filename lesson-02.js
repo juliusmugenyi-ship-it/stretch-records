@@ -1,33 +1,6 @@
 // Lesson 2 standalone programs
 
-/*
-Prediction:
-
-1. "Start" will print first. RIGHT
-2. "Timer 1" will print second. WRONG
-3. "End" will print third. WRONG
-
-Corrections:
-- Line 2 is wrong because setTimeout callbacks run after the current synchronous code finishes.
-- Line 3 is wrong because "End" is logged immediately before the timer callback runs.
-*/
-
-console.log("Start");
-
-setTimeout(() => {
-  console.log("Timer 1");
-}, 1000);
-
-console.log("End");
-
-/*
-Observation:
-
-The blocking loop occupied the JavaScript call stack on the main thread.
-While it was running, the browser could not handle user interactions,
-render updates, or other queued tasks because the event loop was blocked.
-*/
-
+// question: 1: What will be printed to the console and in what order?
 // Lesson 02 Network observations:
 // Total requests: 11
 // Three requests:
@@ -68,3 +41,86 @@ Observation:
 Arrays store multiple values.
 The length property tells us how many items are inside.
 */
+
+/* question: 2: What will be printed to the console and in what order?
+Prediction:
+
+1. "Start" will print first. RIGHT
+2. "Timer 1" will print second. WRONG
+3. "End" will print third. WRONG
+
+Corrections:
+- Line 2 is wrong because setTimeout callbacks run after the current synchronous code finishes.
+- Line 3 is wrong because "End" is logged immediately before the timer callback runs.
+*/
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timer 1");
+}, 1000);
+
+console.log("End");
+
+/* question: 3: What happens when the button is clicked? 
+Observation:
+
+The blocking loop occupied the JavaScript call stack on the main thread.
+While it was running, the browser could not handle user interactions,
+render updates, or other queued tasks because the event loop was blocked.
+*/
+
+/* question: 4: What will be printed to the console and in what order?
+
+Call stack diagram: Before the error occurs, the call stack will look like this:
+
+1. Push global execution context
+2. Push firstFunction()
+3. Push secondFunction()
+4. Push thirdFunction()
+5. Error occurs inside thirdFunction()
+6. Pop thirdFunction()
+7. Pop secondFunction()
+8. Pop firstFunction()
+
+The stack trace should list the innermost function first because
+that is where the error happened.
+*/
+
+/* after running the code, the console will display the following error message:
+Uncaught Error: Test error
+    at thirdFunction (lesson-02.js:28)
+    at secondFunction (lesson-02.js:24)
+    at firstFunction (lesson-02.js:20)
+    at lesson-02.js:32 
+Call stack diagram:
+
+1. Push global execution context
+2. Push firstFunction()
+3. Push secondFunction()
+4. Push thirdFunction()
+5. Error occurs inside thirdFunction()
+6. thirdFunction() is popped because it throws an error
+7. secondFunction() is popped
+8. firstFunction() is popped
+
+Confirmation:
+The console stack trace matches the diagram:
+thirdFunction → secondFunction → firstFunction
+
+The innermost function appears first because it is where the error occurred.
+*/
+
+function firstFunction() {
+  secondFunction();
+}
+
+function secondFunction() {
+  thirdFunction();
+}
+
+function thirdFunction() {
+  throw new Error("Test error");
+}
+
+firstFunction();
