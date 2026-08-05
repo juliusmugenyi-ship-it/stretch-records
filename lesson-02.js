@@ -126,7 +126,7 @@ function thirdFunction() {
 firstFunction();
 */
 
-// Countdown using setInterval() question: 5: What will be printed to the console and in what order?
+// Countdown using setInterval() question: 6: What will be printed to the console and in what order?
 
 let count = 10;
 
@@ -140,3 +140,36 @@ const countdown = setInterval(() => {
     console.log("Countdown stopped");
   }
 }, 1000);
+
+/*
+Observation:
+The countdown starts at 10 and decrements by 1 every second.
+When the count reaches -1, the interval is cleared, and "Countdown stopped" is printed.
+The output will be:
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+Countdown stopped     
+ */
+
+/*Stretch goal: 7: STRETCH. In a closing comment, 
+explain in your own words how a single threaded language handles a thousand simultaneous waiting tasks without freezing, 
+naming the stack, the facilities, the queues, and the loop.
+
+Js is a single-threaded language, meaning it has one call stack that executes code sequentially. When a thousand simultaneous waiting tasks are initiated, they are not executed all at once. Instead, JavaScript uses an event loop and a task queue to manage these tasks.
+
+When a task is initiated, it is placed in the task queue. The event loop continuously checks if the call stack is empty. If the stack is empty, the event loop takes the next task from the queue and pushes it onto the call stack for execution. This allows JavaScript to handle multiple tasks without freezing, as it processes them one at a time while still being able to respond to user interactions and other events.
+
+In summary, the single-threaded nature of JavaScript, combined with the event loop and task queue, allows it to manage thousands of simultaneous waiting tasks efficiently without freezing the application.    
+
+(It has call stack where it executes code, an event loop that checks for tasks, browser APIs, which handle asynchronous operations, network requests, and a task queue that holds waiting tasks until they can be executed.)
+
+ */
