@@ -1,0 +1,39 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.artist {
+  position: relative;
+  border-radius: 16px;
+  padding: 2rem 0;
+}
+
+.artist::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #111;
+  margin-bottom: 2rem;
+}
+
+.song-card {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.artist-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}

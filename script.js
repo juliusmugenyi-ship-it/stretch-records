@@ -4,11 +4,15 @@ const statusBox = document.querySelector("#status");
 statusBox.textContent = "Loading artists...";
 
 fetch("artists.json")
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Could not load artist data.");
+    }
+
+    return response.json();
+  })
   .then((artists) => {
     setTimeout(() => {
-      statusBox.textContent = "";
-
       artists.forEach((artist) => {
         const section = document.createElement("section");
         section.className = "artist";
@@ -46,4 +50,13 @@ fetch("artists.json")
         container.appendChild(section);
       });
     }, 2000);
+  })
+  .catch((error) => {
+    statusBox.textContent =
+      "Sorry, we couldn't load the artists. Please refresh the page and try again.";
+
+    console.error(error);
+  })
+  .finally(() => {
+    statusBox.textContent = "";
   });
