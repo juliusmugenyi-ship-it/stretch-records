@@ -1,7 +1,5 @@
-// ===============================
-// Lesson 3 - Step 3
+//Step 3
 // Promise handlers: then, catch, finally
-// ===============================
 
 function loadArtists() {
   return new Promise((resolve) => {
@@ -24,10 +22,8 @@ loadArtists()
     console.log("Loading finished.");
   });
 
-// ===============================
-// Lesson 3 - Step 4
+//Step 4
 // Ordering puzzle
-// ===============================
 
 // Prediction:
 // 1. Start
@@ -50,10 +46,8 @@ console.log("End");
 // Explanation:
 // Promise callbacks run as microtasks before timer callbacks (macrotasks).
 
-// ===============================
-// Lesson 3 - Step 5
+// Step 5
 // Async / Await version
-// ===============================
 
 async function displayArtists() {
   console.log("Loading...");
@@ -70,10 +64,8 @@ async function displayArtists() {
 
 displayArtists();
 
-// ===============================
-// Lesson 3 - Step 6
+//Step 6
 // Custom Error
-// ===============================
 
 class MissingArtistError extends Error {
   constructor(message) {
@@ -94,10 +86,8 @@ try {
   console.log("Please update the artist data before publishing.");
 }
 
-// ===============================
-// Lesson 3 - Step 7
+// Step 7
 // Rethrowing
-// ===============================
 
 function loadPage() {
   try {
@@ -116,10 +106,8 @@ try {
 // Final message:
 // Artists page failed while loading data: Missing artist data
 
-// ===============================
-// Lesson 3 - Step 8
+//Step 8
 // Promise.all() and Promise.allSettled()
-// ===============================
 
 function delayedTask(name, delay) {
   return new Promise((resolve) => {
