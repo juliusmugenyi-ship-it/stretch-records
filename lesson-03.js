@@ -118,33 +118,56 @@ try {
 
 // ===============================
 // Lesson 3 - Step 8
-// Promise.all()
+// Promise.all() and Promise.allSettled()
 // ===============================
 
-const task1 = Promise.resolve("Artists");
-const task2 = Promise.resolve("Albums");
-const task3 = new Promise((resolve) =>
-  setTimeout(() => resolve("Songs"), 1000),
-);
+function delayedTask(name, delay) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`${name} completed`);
+    }, delay);
+  });
+}
 
-Promise.all([task1, task2, task3]).then((result) => {
-  console.log(result);
+// Three independent delayed tasks
+
+const task1 = delayedTask("Artists", 1000);
+const task2 = delayedTask("Albums", 1500);
+const task3 = delayedTask("Songs", 2000);
+
+Promise.all([task1, task2, task3]).then((results) => {
+  console.log("Combined result:", results);
 });
 
-// Reject one task
+// Make one task reject
 
-const badTask = Promise.reject("Server unavailable");
+function failedTask(name, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(`${name} failed`);
+    }, delay);
+  });
+}
 
-Promise.all([task1, task2, badTask]).catch((error) => {
-  console.log("Promise.all failed:", error);
+const task4 = delayedTask("Artists", 1000);
+const task5 = failedTask("Albums", 1500);
+const task6 = delayedTask("Songs", 2000);
+
+Promise.all([task4, task5, task6])
+  .then((results) => {
+    console.log(results);
+  })
+  .catch((error) => {
+    console.log("Promise.all failed:", error);
+  });
+
+// Promise.allSettled keeps all outcomes
+
+Promise.allSettled([task4, task5, task6]).then((results) => {
+  console.log("All outcomes:", results);
 });
 
-// Promise.allSettled()
-
-Promise.allSettled([task1, task2, badTask]).then((results) => {
-  console.log(results);
-});
-
-// Optional observation:
-// Promise.all stops immediately when one promise rejects.
-// Promise.allSettled waits for every promise and reports each result.
+// Observation:
+// Promise.all fails when one promise rejects.
+// Promise.allSettled waits for every promise and reports
+// both successful and failed tasks, keeping the survivors.
