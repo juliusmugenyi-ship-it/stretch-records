@@ -3,24 +3,16 @@ body {
 }
 
 .artist {
-  border-radius: 16px;
-}
-
-.song-card {
-  border-radius: 12px;
-  padding: 1rem;
-}
-
-.artist {
   position: relative;
+  border-radius: 16px;
   padding: 2rem 0;
 }
 
 .artist::before {
   content: "";
   display: block;
-  height: 4px;
   width: 100%;
+  height: 4px;
   background: #111;
   margin-bottom: 2rem;
 }
