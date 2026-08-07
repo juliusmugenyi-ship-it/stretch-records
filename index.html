@@ -1,40 +1,234 @@
 <!doctype html>
-<body>
-  <header>
-    <div class="brand">
-      <a href="/">Stretch Records</a>
-    </div>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <main>
-    <section class="artists-intro">
-      <p id="status"></p>
-      <section id="artists"></section>
-      <p class="kicker">Artists</p>
-      <h1>Our Artists</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-      <nav class="jump-navigation" aria-label="Jump to artists">
-        <a href="#artist-1">Artist 1</a>
-        <a href="#artist-2">Artist 2</a>
-        <a href="#artist-3">Artist 3</a>
-      </nav>
-    </section>
+    <title>Stretch Records</title>
+  </head>
 
-    <section id="artist-1">
-      <!-- Artist content will be added later -->
-    </section>
+  <body>
+    <header>
+      <div class="brand">
+        <a href="/">Stretch Records</a>
+      </div>
+    </header>
 
-    <section id="artist-2">
-      <!-- Artist content will be added later -->
-    </section>
+    <main>
+      <section class="artists-intro">
+        <p class="kicker">Artists</p>
+        <h1>Our Artists</h1>
 
-    <section id="artist-3">
-      <!-- Artist content will be added later -->
-    </section>
-    <footer>
-      <p>© Stretch Records</p>
-    </footer>
-  </main>
-  <script src="script.js"></script>
-  <script src="lesson-01.js"></script>
-</body>
+        <nav class="jump-navigation" aria-label="Jump to artists">
+          <a href="#artist-1">Artist 1</a>
+          <a href="#artist-2">Artist 2</a>
+          <a href="#artist-3">Artist 3</a>
+          <a href="#artist-4">Artist 4</a>
+          <a href="#artist-5">Artist 5</a>
+          <a href="#artist-6">Artist 6</a>
+        </nav>
+      </section>
+
+      <section id="artist-1" class="artist">
+        <img class="artist-avatar" src="images/pinkfong.jpeg" alt="Pinkfong" />
+
+        <h2>Pinkfong</h2>
+
+        <p class="meta">Children's music · 5 songs · Total: 11:31</p>
+
+        <p class="blurb">
+          The children's music powerhouse behind the most-watched video on the
+          internet. Short, loud, unbelievably sticky.
+        </p>
+
+        <ol class="songs">
+          <li class="song-card">Baby Shark</li>
+          <li class="song-card">Wheels on the Bus</li>
+          <li class="song-card">Five Little Monkeys</li>
+          <li class="song-card">Monkey Banana</li>
+          <li class="song-card">Shark Family</li>
+        </ol>
+      </section>
+
+      <section id="artist-2" class="artist">
+        <img
+          class="artist-avatar"
+          src="images/adriano-celentano.jpg"
+          alt="Adriano-Celentano"
+        />
+
+        <h2>Adriano-Celentano</h2>
+
+        <p class="meta">Italian pop · 5 songs · Total: 20:52</p>
+
+        <p class="blurb">
+          Sixty years of Italian pop in one voice: rock and roll imported,
+          rewritten and sung back louder.
+        </p>
+
+        <ol class="songs">
+          <li class="song-card">Azzurro</li>
+          <li class="song-card">L'emozione non ha voce</li>
+          <li class="song-card">Il ragazzo della via Gluck</li>
+          <li class="song-card">Susanna</li>
+          <li class="song-card">Confessa</li>
+        </ol>
+      </section>
+
+      <section id="artist-3" class="artist">
+        <img class="artist-avatar" src="images/asake.jpg" alt="Asake" />
+
+        <h2>Asake</h2>
+
+        <p class="meta">Afrobeats · 5 songs · Total: 14:08</p>
+
+        <p class="blurb">
+          Amapiano log drums, fuji chants and street-Yoruba hooks. The loudest
+          new voice out of Lagos.
+        </p>
+
+        <ol class="songs">
+          <li class="song-card">Sungba</li>
+          <li class="song-card">Joha</li>
+          <li class="song-card">Jogodo</li>
+          <li class="song-card">Amapiano</li>
+          <li class="song-card">Lonely At The Top</li>
+        </ol>
+      </section>
+
+      <section id="artist-4">
+        <img
+          class="artist-avatar"
+          src="images/miyagi-and-andy-panda.jpg"
+          alt="Miyagi and Andy Panda"
+        />
+
+        <h2>Miyagi and Andy Panda</h2>
+
+        <p class="meta">Hip-hop · 5 songs · Total: 16:21</p>
+
+        <p class="blurb">
+          Two rappers from Vladikavkaz, half sung and half spoken, built on dub
+          basslines and long reverbs.
+        </p>
+
+        <ol class="songs">
+          <li class="song-card">Kosandra</li>
+          <li class="song-card">Utopia</li>
+          <li class="song-card">Minor</li>
+          <li class="song-card">Saloon</li>
+          <li class="song-card">I Got Love</li>
+        </ol>
+      </section>
+      <section id="artist-5">
+        <img
+          class="artist-avatar"
+          src="images/johnny-cash.jpg"
+          alt="Johnny Cash"
+        />
+
+        <h2>Johnny Cash</h2>
+
+        <p class="meta">Country · 5 songs · Total: 15:40</p>
+
+        <p class="blurb">
+          The man in black. Three chords, the truth, and a baritone that
+          outlasted every genre it was filed under.
+        </p>
+
+        <ol class="songs">
+          <li class="song-card">Hurt</li>
+          <li class="song-card">Ring of Fire</li>
+          <li class="song-card">Highwayman</li>
+          <li class="song-card">God's Gonna Cut You Down</li>
+          <li class="song-card">Ghost Riders in the Sky</li>
+        </ol>
+      </section>
+
+      <section id="artist-6">
+        <img
+          class="artist-avatar"
+          src="images/bob-marley.jpg"
+          alt="Bob Marley"
+        />
+
+        <h2>Bob Marley</h2>
+
+        <p class="meta">Reggae · 5 songs · Total: 16:21</p>
+
+        <p class="blurb">
+          The legend of reggae music. His messages of love, unity, and social
+          justice continue to inspire generations.
+        </p>
+
+        <ol class="songs">
+          <li class="song-card">Zimbabwe</li>
+          <li class="song-card">Redemption Song</li>
+          <li class="song-card">No Woman No Cry</li>
+          <li class="song-card">One Love</li>
+          <li class="song-card">Is This Love</li>
+        </ol>
+      </section>
+      <img class="artist-avatar" src="images/adele.jpg" alt="Adele" />
+
+      <h2>Adele</h2>
+
+      <p class="meta">Pop · 5 songs · Total: 18:30</p>
+
+      <p class="blurb">
+        The voice of a generation. Soulful ballads and powerful anthems that
+        resonate with millions.
+      </p>
+
+      <ol class="songs">
+        <li class="song-card">Hello</li>
+        <li class="song-card">Rolling in the Deep</li>
+        <li class="song-card">Someone Like You</li>
+        <li class="song-card">Set Fire to the Rain</li>
+        <li class="song-card">Skyfall</li>
+      </ol>
+
+      <section class="newsletter">
+        <h2>Join our newsletter</h2>
+
+        <form action="" method="get">
+          <form id="artist-form"></form>
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div>
+            <label for="genre">Favorite genre</label>
+            <select id="genre" name="genre">
+              <option value="Hip-hop">Hip-Pop</option>
+              <option value="Country">Country</option>
+              <option value="Afrobeats">Afrobeats</option>
+              <option value="Italian pop">Italian pop</option>
+              <option value="Children's music">Children's music</option>
+            </select>
+          </div>
+
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <footer>
+        <p>© Stretch Records</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+    <script src="lesson-01.js"></script>
+  </body>
+</html>

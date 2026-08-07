@@ -1,0 +1,55 @@
+//Step 1:
+// GET http://localhost:3000/artists
+// Status: 200 OK
+// Content-Type: application/json
+
+// Step 2:
+// GET http://localhost:3000/not-found
+// Status: 404 Not Found
+// Content-Type: application/json
+
+// step 3:
+// Response observations:
+// ok: true
+// status: 200
+// Access-Control-Allow-Origin: *
+
+// Step 4:
+// Response observations:
+// ok: false
+// status: 404
+// Access-Control-Allow-Origin: *
+
+// Fetch fulfilled even with a 404 response.
+// response.ok was false.
+// Throwing an Error allowed the catch block to handle it.
+
+// With the server stopped, fetch rejected with a network error.
+// A 404 returned a Response object, but a refused connection rejected the Promise.
+
+// Step 5:
+
+// When the server was stopped, fetch rejected because
+// there was no connection.
+// A 404 returned a Response object, but a refused connection
+// rejected the Promise.
+
+//step 8:
+// Endpoint:
+// Method:
+// Parameter:
+// Response shape:
+// Limit:
+
+// post
+//     at App.listen (file:///Users/JuliusMugenyi/.npm/_npx/aff12940958e4bf4/node_modules/@tinyhttp/app/dist/app.js:323:58)
+//  at file:///Users/JuliusMugenyi/.npm/_npx/aff12940958e4bf4/node_modules/json-server/lib/bin.js:133:5
+//Emitted 'error' event on Server instance at:
+//   at emitErrorNT (node:net:2045:8)
+// at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+//code: 'EADDRINUSE',
+// errno: -48,
+// syscall: 'listen',
+// address: '::',
+//port: 3000
+//}
