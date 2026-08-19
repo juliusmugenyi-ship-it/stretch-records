@@ -1,0 +1,42 @@
+{
+  "name": "Stretch Records",
+  "description": "A record label for emerging artists and innovative music projects, focusing on diverse genres and unique sounds.",
+  "founded": "2010",
+  "founder": "Alex Johnson",
+  "location": "Los Angeles, California, USA",
+  "website": "https://www.stretchrecords.com",
+  "artists": [
+    {
+      "name": "The Echoes",
+      "genre": "Indie Rock",
+      "albums": [
+        {
+          "title": "Reflections",
+          "release_year": 2015,
+          "tracks": ["Mirror Image", "Silent Waves", "Fading Light"]
+        },
+        {
+          "title": "Resonance",
+          "release_year": 2018,
+          "tracks": ["Vibrations", "Echo Chamber", "Soundscapes"]
+        }
+      ]
+    },
+    {
+      "name": "Luna Nova",
+      "genre": "Electronic",
+      "albums": [
+        {
+          "title": "Stellar Dreams",
+          "release_year": 2017,
+          "tracks": ["Cosmic Drift", "Nebula Nights", "Galactic Pulse"]
+        },
+        {
+          "title": "Aurora",
+          "release_year": 2020,
+          "tracks": ["Northern Lights", "Polar Vortex", "Celestial Dance"]
+        }
+      ]
+    }
+  ]
+}
